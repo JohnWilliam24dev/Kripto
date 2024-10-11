@@ -1,0 +1,15 @@
+.button_side_nav{
+    border: 0;
+    padding: 20px;
+    border-radius: 40px;
+    
+}
+.dashboard_body{
+    background-color: rgb(51, 44, 44);
+    height: 100vh;
+}
+.side_nav{
+    background-color: rgb(190, 6, 6);
+    width: 30vw;
+    height: 100vh;
+}
