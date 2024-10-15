@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Box, Drawer, AppBar, Toolbar, IconButton, List, ListItem, ListItemText } from '@mui/material';
+import { Box, Drawer, AppBar, Toolbar, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import "./Drawer.css"
+import SimpleAccordion from '../Accordion/Accordion';
 
 export default function DrawerNav() {
   const [drawerOpen, setDrawerOpen] = React.useState(false);
@@ -15,25 +16,38 @@ export default function DrawerNav() {
 
   const drawerList = () => (
     <Box
-      
       role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
       className='catalog'
     >
-      <List >
-        {['Home', 'About', 'Contact', 'Blog'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <div>
+      <SimpleAccordion
+      title={"Senhas"}
+      fun={
+      <button className='button_catalog'>Adicione uma Senha +</button>
+      }/>
+      <SimpleAccordion
+      title={"Notas"}
+      fun={
+      <button className='button_catalog'>Adicione uma Nota +</button>
+      }/>
+      <SimpleAccordion
+      title={"Grupos de Senhas"}
+      fun={
+      <button className='button_catalog'>Adicione um grupo de Senha +</button>
+      }/>
+      <SimpleAccordion
+      title={"Grupos de Notas"}
+      fun={
+      <button className='button_catalog'>Adicione um grupo de Notas +</button>
+      }/>
+      </div>
+      
     </Box>
   );
 
   return (
     <div>
-      <AppBar  className='barra' >
+      <AppBar className='barra' >
         <Toolbar >
           <IconButton
             edge="start"

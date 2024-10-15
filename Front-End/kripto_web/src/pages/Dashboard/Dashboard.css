@@ -5,7 +5,7 @@
     
 }
 .dashboard_body{
-    background-color: rgb(51, 44, 44);
+    display: flex;
     height: 100vh;
 }
 .side_nav{
