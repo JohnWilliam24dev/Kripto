@@ -10,7 +10,7 @@ function Dashboard() {
   return (
     <div className='dashboard_body'>
       <DrawerNav/>
-      <Editor2/>
+      <Editor2 className="Editor"/>
       
     </div>
   )
