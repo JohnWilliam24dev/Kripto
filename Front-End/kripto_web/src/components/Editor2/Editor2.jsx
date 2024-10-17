@@ -29,11 +29,12 @@ function Editor2() {
         <button onClick={() => setFontSize(fontSize + 1)}>+</button>
       </nav>
       <div className='textarea_content'>
-      <textarea 
+      <div
+        contentEditable
         name="" 
         id="texto"
         style={{ fontSize: `${fontSize}pt` }}
-        ></textarea>
+        ></div>
       </div>
 
         
