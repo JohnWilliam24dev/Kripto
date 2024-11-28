@@ -8,6 +8,11 @@ import Login from './pages/Login/Login.jsx'
 import Error404 from './pages/404/Error404.jsx'
 import Register from './pages/Register/Register.jsx'
 import Dashboard from './pages/Dashboard/Dashboard.jsx'
+
+if (typeof global === 'undefined') {
+  window.global = window;
+}
+
 const router =createBrowserRouter([
    {
     path:"/",
